@@ -9,6 +9,6 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_USER=kazaxy
+      - POSTGRES_USER=psguser
       - POSTGRES_PASSWORD=p@ssw0rd
-      - POSTGRES_DB=kazaxy
+      - POSTGRES_DB=swp
