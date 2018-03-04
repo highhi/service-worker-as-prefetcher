@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:9.6-alpine
+    volumes:
+      - .data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=kazaxy
+      - POSTGRES_PASSWORD=p@ssw0rd
+      - POSTGRES_DB=kazaxy

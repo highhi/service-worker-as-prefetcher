@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h1= user.name
+  p This user's id is #{user.id}
+  if user.id !== 1
+    a(href=`/users/${user.id - 1}`) Prev
+  span  | 
+  if user.id < 3
+    a(href=`/users/${user.id + 1}`) Next
+
+append stylesheets
+  if user.id < 3
+    link(id='sw-as-prefetch', href=`/users/${user.id + 1}`)
